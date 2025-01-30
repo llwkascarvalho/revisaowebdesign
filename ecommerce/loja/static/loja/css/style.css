@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Quilin;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    background-color: #FFFDF0;
+    max-width: 1400px;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 23px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    width: 256px;
+    color:#BE2233;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 496px;
+    height: 44px;
+    border-radius: 5px;
+    opacity: 0px;
+    background-color: #F4D9D2;
+}
+
+.paragragh-search {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    color: #CC876A;
+    padding: 12px 0px 13px 30px;
+}
+
+.img-seacrh {
+    width: 15.71px;
+    height: 16.29px;
+    top: 47px;
+    left: 851px;
+    gap: 0px;
+    border: 2px;
+    opacity: 0px;
+    padding: 12px 30px 13px 0px;
+}
+
+.login-logout {
+    display: flex;
+    align-items: center;
+    margin: 0px 27px 0px 27px;
+}
+
+.img-login {
+    width: 18px;
+    height: 18px;
+    top: 48px;
+    left: 915px;
+    opacity: 0px;
+    margin-right: 4px;
+}
+
+.text-myaccount {
+    font-family: Postre;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16.73px;
+    text-align: left;
+    color: #346D9E;
+}
+
+.text-login {
+    font-family: Postre;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16.73px;
+    text-align: left;
+    color:#CC876A;
+}
+
+.img-cart {
+    width: 25px;
+    height: 25px;
+    top: 39px;
+    left: 1078px;
+    gap: 0px;
+    opacity: 0px;
+    margin-right: 15px;
+}
+
+.text-elipse-o {
+    font-family: Postre;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.84px;
+    background-color: #CC876A;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    align-content: center;
+    color: #FFFDF0;
+    border-radius: 100%;
+}
+
+.hr-header {
+    width: 1032px;
+    height: 0px;
+    top: 101px;
+    left: 123px;
+    border: 2px solid #F4D9D2;   
+}
+
+.links {
+    max-width: 1600px;
+    margin: 37px 0px 22px 0px;
+}
+
+ul {
+    display: flex;
+    gap: 27px;
+}
+
+li {
+    font-size: 24px;
+    line-height: 19.2px;
+    color: #346D9E;
+}
+
+main {
+    width: 100vw;
+    height: 385px; 
+    top: 163px;
+    gap: 0px;
+    background-color: #F08AA0;
+    overflow: hidden;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.text-BrazilianTrends {
+    color:#BE2233;
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 104px;
+    text-align: left;
+}
+
+.text-novacolecao {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 46.4px;
+    text-align: left;
+    color: #FFFDF0;
+}
+
+.img-inferior-esquerdo {
+    position: absolute;
+    top: 20px;
+    transform: translateY(158%);
+}
+
+.img-superior-direito {
+    transform: translate(1000px, -50px);
+}
+
+.img-inferior-direito {
+    transform: translate(1000px, -250px);
+}

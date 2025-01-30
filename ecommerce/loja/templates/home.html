@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'loja/css/style.css' %}">
+    <title>Revisão Web Design</title>
+</head>
+<body>
+    <header>
+        <section class="cabecalho">
+            <h1>BrazilianTrends</h1>
+            <div class="search">
+                <p class="paragragh-search">O que deseja procurar ?</p>
+                <img class="img-seacrh" src="{% static 'loja/imagens/Group 6.png' %}" alt="">
+            </div>
+            <div class="login-logout">
+                <img class="img-login" src="{% static 'loja/imagens/Group 3.png' %}" alt="">
+                <span>
+                    <p class="text-myaccount">minha conta</p>
+                    <p class="text-login">entrar/cadastrar</p>
+                </span>
+            </div>
+            <img class="img-cart" src="{% static 'loja/imagens/cart.png' %}" alt="">
+            <p class="text-elipse-o">O</p>
+        </section>
+        <hr class="hr-header">
+        <section class="links">
+            <nav>
+                <ul>
+                    <a href="{% url 'cadastrar_fornecedor' %}"><li>cadastrar fornecedor</li></a>
+                    <a href="{% url 'cadastrar_categoria' %}"><li>cadastrar categoria</li></a>
+                    <a href="{% url 'cadastrar_produto' %}"><li>cadastrar produtos</li></a>
+
+                    <li>calças</li>
+                    <li>sapatos</li>
+                    <li>acessórios</li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    
+    <main>
+        <img src="{% static 'loja/imagens/superior-esquerdo.png' %}" alt="">
+        <section class="banner">
+            <p class="text-BrazilianTrends">BrazilianTrends</p>
+            <p class="text-novacolecao">sua nova coleção favorita</p>
+        </section>
+        <img class="img-inferior-esquerdo" src="{% static 'loja/imagens/inferior-esquerdo.png' %}" alt="">
+        <img class="img-superior-direito" src="{% static 'loja/imagens/superior-direito.png' %}" alt="">
+        <img class="img-inferior-direito" src="{% static 'loja/imagens/inferior-direito.png' %}" alt="">
+    </main>
+</body>
+</html>
