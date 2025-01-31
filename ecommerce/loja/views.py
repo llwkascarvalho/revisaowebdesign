@@ -1,34 +1,42 @@
-from django.shortcuts import render, redirect
+from django.views.generic import ListView, CreateView
+from django.urls import reverse_lazy
+from .models import Fornecedor, Categoria, Produto
 from .forms import FornecedorForm, CategoriaForm, ProdutoForm
 
-def home(request):
-    return render(request, 'home.html')
-def cadastrar_fornecedor(request):
-    if request.method == 'POST':
-        form = FornecedorForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('cadastrar_fornecedor')
-    else:
-        form = FornecedorForm()
-    return render(request, 'loja/cadastrar_fornecedor.html', {'form': form})
+class HomeView(ListView):
+    model = Produto
+    template_name = 'home.html'
+    context_object_name = 'produtos'
 
-def cadastrar_categoria(request):
-    if request.method == 'POST':
-        form = CategoriaForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('cadastrar_categoria')
-    else:
-        form = CategoriaForm()
-    return render(request, 'loja/cadastrar_categoria.html', {'form': form})
+class FornecedorCreateView(CreateView):
+    model = Fornecedor
+    form_class = FornecedorForm
+    template_name = 'loja/cadastrar_fornecedor.html'
+    success_url = reverse_lazy('cadastrar_fornecedor')
 
-def cadastrar_produto(request):
-    if request.method == 'POST':
-        form = ProdutoForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('cadastrar_produto')
-    else:
-        form = ProdutoForm()
-    return render(request, 'loja/cadastrar_produto.html', {'form': form})
+class CategoriaCreateView(CreateView):
+    model = Categoria
+    form_class = CategoriaForm
+    template_name = 'loja/cadastrar_categoria.html'
+    success_url = reverse_lazy('cadastrar_categoria')
+
+class ProdutoCreateView(CreateView):
+    model = Produto
+    form_class = ProdutoForm
+    template_name = 'loja/cadastrar_produto.html'
+    success_url = reverse_lazy('cadastrar_produto')
+
+class FornecedorListView(ListView):
+    model = Fornecedor
+    template_name = 'loja/listar_fornecedores.html'
+    context_object_name = 'fornecedores'
+
+class CategoriaListView(ListView):
+    model = Categoria
+    template_name = 'loja/listar_categorias.html'
+    context_object_name = 'categorias'
+
+class ProdutoListView(ListView):
+    model = Produto
+    template_name = 'loja/listar_produtos.html'
+    context_object_name = 'produtos'

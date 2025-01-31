@@ -4,7 +4,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar Categoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="{% static 'loja/css/geral.css' %}">
 </head>
 <body>
@@ -13,16 +14,15 @@
         <a href="{% url 'cadastrar_produto' %}">Cadastrar Produto</a>
         <a href="{% url 'cadastrar_fornecedor' %}">Cadastrar Fornecedor</a>
         <a href="{% url 'listar_fornecedores' %}">Fornecedores</a>
-        <a href="{% url 'listar_categorias' %}">Categorias</a>
         <a href="{% url 'listar_produtos' %}">Produtos</a>
     </header>
     <main>
-        <h2>Cadastrar Categoria</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Salvar</button>
-        </form>
+        <h1>Categorias Cadastradas</h1>
+        <ul>
+            {% for categoria in categorias %}
+            <li>{{ categoria.nome }}</li>
+            {% endfor %}
+        </ul>
     </main>
 </body>
 </html>

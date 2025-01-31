@@ -1,15 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="{% static 'loja/css/geral.css' %}">
 </head>
 <body>
-    <h2>Cadastrar Produto</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Salvar</button>
-    </form>
+    <header>
+        <a href="{% url 'home' %}">Voltar para a home</a>
+        <a href="{% url 'cadastrar_categoria' %}">Cadastrar Categoria</a>
+        <a href="{% url 'cadastrar_fornecedor' %}">Cadastrar Fornecedor</a>
+        <a href="{% url 'listar_fornecedores' %}">Fornecedores</a>
+        <a href="{% url 'listar_categorias' %}">Categorias</a>
+        <a href="{% url 'listar_produtos' %}">Produtos</a>
+    </header>
+    <main>
+        <h2>Cadastrar Produto</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
 </body>
 </html>
